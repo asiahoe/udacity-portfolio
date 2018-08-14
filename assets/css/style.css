@@ -24,3 +24,29 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+li:before {
+  font-family: "Material Icons";
+  padding-right: 0.25em;
+  vertical-align: bottom;
+}
+
+li[data-type="preview"]:before {
+  content: 'visibility';
+}
+
+li[data-type="code"]:before {
+  content: 'code';
+}
+
+li[data-type="work"]:before {
+  content: 'work';
+}
+
+li[data-type="profile"]:before {
+  content: 'face';
+}
+
+li[data-type="social"]:before {
+  content: 'chat';
+}
