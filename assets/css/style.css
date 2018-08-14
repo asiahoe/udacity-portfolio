@@ -19,3 +19,8 @@ h1, h2 {
 .role {
   font-weight: 900;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
