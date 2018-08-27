@@ -58,37 +58,193 @@ h1, h2 {
   grid-area: logo;
 }
 
-ul {
+/* Featured Projects */
+
+.featured .project {
   display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.featured .title {
+  order: 1;
+}
+
+.featured .description {
+  background-color: #efefef;
+  margin-top: 0;
+  padding: 0 1em 1em;
+  order: 3;
+}
+
+.featured .thumbnail {
+  background-color: #efefef;
+  padding: 1em;
+  order: 2;
+}
+
+.featured .links {
+  order: 4;
+}
+
+/* Links */
+
+.links {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5em;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li:before {
+.links li a:before {
   font-family: "Material Icons";
-  padding-right: 0.25em;
+  padding-right: 0.5em;
   vertical-align: bottom;
 }
 
-li[data-type="preview"]:before {
+.links li[data-type="preview"] a:before {
   content: 'visibility';
 }
 
-li[data-type="code"]:before {
+.links li[data-type="code"] a:before {
   content: 'code';
 }
 
-li[data-type="work"]:before {
+.links li[data-type="work"] a:before {
   content: 'work';
 }
 
-li[data-type="profile"]:before {
+.links li[data-type="profile"] a:before {
   content: 'face';
 }
 
-li[data-type="social"]:before {
+.links li[data-type="social"] a:before {
   content: 'chat';
+}
+
+.links a {
+  border: 1px solid #ccc;
+  border-radius: 2em;
+  color: #0D47A1;
+  display: block;
+  height: 3.5em;
+  margin-bottom: 0.5em;
+  padding: 1em 1em 1em 0.75em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.links a:hover, .links a:active {
+  background-color: #0D47A1;
+  border: 0;
+  color: #fff;
+}
+
+/* Mobile Devices */
+
+@media all and (max-width: 414px) {
+  .candidate {
+    position: sticky;
+      top: 0;
+  }
+
+  .role {
+    font-size: 1.125em;
+  }
+}
+
+/* Mobile Devices and Larger */
+
+@media all and (min-width: 360px) {
+  .work {
+    margin: 2em 0;
+  }
+
+  .backlog {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+      grid-gap: 1em;
+      align-items: stretch;
+  }
+
+  .backlog header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+  }
+
+  .thumbnail {
+    height: 15em;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  .backlog .project {
+    background-color: #efefef;
+    border: 1px solid #ccc;
+  }
+
+  .backlog h3 {
+    background-color: #fff;
+    padding: 1em;
+  }
+
+  .backlog p {
+    padding: 0 1em;
+  }
+}
+
+/* Tablet Devices Portrait and Larger */
+
+@media all and (min-width: 659px) {
+  .featured {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+      grid-gap: 1em;
+  }
+
+  .featured header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+  }
+
+  .social ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet Devices Desktop and Larger */
+
+@media all and (min-width: 799px) {
+  body {
+    display: flex;
+      flex-flow: row wrap;
+      flex-grow: 2;
+      justify-content: space-between;
+  }
+
+  .candidate {
+    flex-basis: 40%;
+    order: 0;
+  }
+
+  .social {
+    border: 0;
+    flex-basis: 60%;
+    padding: 0%;
+  }
+
+  .social a {
+    margin: 0;
+    order: 0;
+  }
+
+  .portfolio {
+    order: 2;
+    width: 100%;
+  }
+
 }
