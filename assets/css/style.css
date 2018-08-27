@@ -28,27 +28,27 @@ h1, h2 {
   font-style: italic;
 }
 
+/* Masthead */
+
 .candidate {
+  background-color: #fff;
   display: grid;
     grid-template-areas:
       "logo name"
       "logo role";
     grid-template-columns: 4em auto;
     grid-gap: 0.5em 1em;
-    justify-items: start;
-  height: 4em;
+  padding: 1em 0;
 }
 
 .name {
   grid-area: name;
-  align-self: end;
   margin: 0;
 }
 
 .role {
   font-size: 1.25em;
   grid-area: role;
-    align-self: start;
   margin: 0;
   position: relative;
     right: 0.25em;
