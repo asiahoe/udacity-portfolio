@@ -1,18 +1,26 @@
+/* General Styles */
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  color: #444;
   font: 16px/1.5em Roboto, sans-serif;
-  margin: 1em;
+  margin: 1em auto;
+  padding: 0 1em;
+  max-width: 960px;
 }
 
 img, embed, object, video {
 	max-width: 100%;
 }
 
-header, h1, h2, h3 {
+/* Headings */
+
+h1, h2, h3, .role {
   font-family: "Playfair Display", serif;
+  margin-top: 0;
 }
 
 h1, h2 {
